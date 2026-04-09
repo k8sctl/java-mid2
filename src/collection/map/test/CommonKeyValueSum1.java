@@ -16,6 +16,10 @@ public class CommonKeyValueSum1 {
         map2.put("C", 5);
         map2.put("D", 6);
 
+        // 아래처럼 Map.of()를 이용해서 빠르게 Map을 생성할 수 있다.
+        // 이렇게 생성한 Map은 불변 객체이기 때문에 데이터를 수정할 수 없다.
+        // Map<String, Integer> map3 = Map.of("A", 1, "B", 2, "C", 3);
+
         Map<String, Integer> resultMap = new HashMap<>();
 
         // 공통으로 들어있는 키를 찾고, 그 값을 구해라.

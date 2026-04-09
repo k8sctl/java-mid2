@@ -14,10 +14,21 @@ public class ItemPriceTest {
         map.put("망고", 1000);
         map.put("딸기", 1000);
 
+        // 1. 내 풀이
+        /*
+            List<String> keyList = new ArrayList<>();
+            for (String key : map.keySet()) {
+                if (map.get(key) == 1000) {
+                    keyList.add(key);
+                }
+            }
+        */
+
+        // 2. 정답 풀이
         List<String> keyList = new ArrayList<>();
-        for (String key : map.keySet()) {
-            if (map.get(key) == 1000) {
-                keyList.add(key);
+        for (Map.Entry<String, Integer> entry : map.entrySet()) {
+            if (entry.getValue().equals(1000)) {
+                keyList.add(entry.getKey());
             }
         }
         System.out.println(keyList);
